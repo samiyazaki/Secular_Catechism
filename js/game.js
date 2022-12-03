@@ -59,6 +59,10 @@ function startTimer(duration, display) {
 
         if (diff <= 0) {
             window.location.href="./end.html"
+            setTimeout (() => {
+                selectedChoice.parentElement.classList.remove(classToApply)
+                getNewQuestion()
+            }, 1000)
         }
     };
     timer();
