@@ -44,6 +44,31 @@ let questions = [
         answer: 4, 
     }, 
 ]
+function startTimer(duration, display) {
+    var start = Date.now(),
+        diff,
+        seconds;
+    function timer() {
+        diff = duration - (((Date.now() - start) / 1000) | 0);
+
+        seconds = (diff % 60) | 0;
+
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent =":" + seconds; 
+
+        if (diff <= 0) {
+            window.location.href="./end.html"
+        }
+    };
+    setInterval(timer, 1000);
+}
+
+window.onload = function () {
+    var thirtySeconds = 3,
+        display = document.querySelector('#time');
+    startTimer(thirtySeconds, display);
+};
 
 const SCORE_POINTS = 100
 const MAX_QUESTIONS = 4

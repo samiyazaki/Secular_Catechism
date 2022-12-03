@@ -20,6 +20,25 @@ h2 {
     font-size: 4.2rem;
     margin-bottom: 4rem;
 }
+ul {
+    font-size: 6rem;
+    margin-bottom: 5rem;
+    justify-content: center;
+    padding: 2rem 0;
+    width: 100%;
+    text-align: left;
+    position:relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #03e9f4;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+}
 .container {
     width:100vw;
     height: 100vh;
