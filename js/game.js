@@ -61,6 +61,7 @@ function startTimer(duration, display) {
             window.location.href="./end.html"
         }
     };
+    timer();
     setInterval(timer, 1000);
 }
 
