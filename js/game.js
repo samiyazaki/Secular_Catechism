@@ -59,10 +59,8 @@ function startTimer(duration, display) {
 
         if (diff <= 0) {
             window.location.href="./end.html"
-            setTimeout (() => {
-                selectedChoice.parentElement.classList.remove(classToApply)
-                getNewQuestion()
-            }, 1000)
+            localStorage.setItem('mostRecentScore', score)
+        return window.location.assign('/end.html')
         }
     };
     timer();
@@ -70,7 +68,7 @@ function startTimer(duration, display) {
 }
 
 window.onload = function () {
-    var thirtySeconds = 3,
+    var thirtySeconds = 30,
         display = document.querySelector('#time');
     startTimer(thirtySeconds, display);
 };
