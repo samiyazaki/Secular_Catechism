@@ -10,7 +10,7 @@ let score = 0
 let questionCounter = 0
 let availableQuestions = []
 
-var timeLeft = 30;
+var timeLeft = 3000;
 var elem = document.getElementById('timer');
 
 var timerId = setInterval(countdown, 1000);
@@ -27,19 +27,19 @@ function countdown() {
 
 let questions = [
     {
-        question: 'What does HTML stand for?',
-        choice1: 'How To Make Lasagna',
-        choice2: 'Happy Time Make Laugh',
-        choice3: 'Hyper Text Markup Language',
-        choice4: 'Hippie Todd Misses London',
+        question: 'What percent of developers use JavaScript?',
+        choice1: '42',
+        choice2: '12%',
+        choice3: '78%',
+        choice4: 'console.log("Hello world!")',
         answer: 3, 
     }, 
     {
-        question: 'What does CSS stand for?',
-        choice1: 'Chancho, Stop Stalling!',
-        choice2: 'Cascading Style Sheets',
-        choice3: 'Call Saul`s Stupid',
-        choice4: 'Chinese Soup Stall',
+        question: 'Which of the following is NOT a way to declare a variable in JavaScript?',
+        choice1: 'var',
+        choice2: 'I DECLARE BANKRUPTCY!!!',
+        choice3: 'let',
+        choice4: 'const',
         answer: 2, 
     }, 
     {
@@ -51,11 +51,11 @@ let questions = [
         answer: 1, 
     }, 
     {
-        question: 'What is Camel Case?',
-        choice1: 'How you keep your Camel clean',
-        choice2: 'An unfortunate incident where a Camel stampede resulted in the stomping of many sandaled toes',
-        choice3: 'Hyper Text Markup Language',
-        choice4: 'A naming convention in which you capitalize the second word when combined',
+        question: 'Which of the following is NOT a type of pop up box in JavaScript?',
+        choice1: 'Alert',
+        choice2: 'Confirm',
+        choice3: 'Prompt',
+        choice4: 'Amazon',
         answer: 4, 
     }, 
 ]

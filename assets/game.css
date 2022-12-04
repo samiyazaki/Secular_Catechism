@@ -11,6 +11,10 @@ body {
     min-width: 80rem;
 
 }
+#question {
+    display: flex;
+    padding: 2rem;
+}
 .time{
     font-size: 3rem;
     display: block;
