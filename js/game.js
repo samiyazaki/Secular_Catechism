@@ -10,7 +10,7 @@ let score = 0
 let questionCounter = 0
 let availableQuestions = []
 
-var timeLeft = 3000;
+var timeLeft = 30;
 var elem = document.getElementById('timer');
 
 var timerId = setInterval(countdown, 1000);
