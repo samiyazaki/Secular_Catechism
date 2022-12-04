@@ -117,7 +117,9 @@ choices.forEach(choice => {
         if(classToApply === 'correct') {
             incrementScore(SCORE_POINTS)
         }
-
+        if(classToApply === 'incorrect') {
+            diff -=5;
+        }
         selectedChoice.parentElement.classList.add(classToApply)
 
         setTimeout (() => {
