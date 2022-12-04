@@ -76,16 +76,24 @@ body {
 #progressBar {
     width: 20rem;
     height: 3rem;
-    border: .2rem solid rgb(11, 223, 36);
+    border: .2rem solid #03e9f4;
     margin-top: 2rem;
     border-radius: 50px;
     overflow: hidden;
+    box-shadow: 0 0 5px #03e9f4,
+            0 0 25px #03e9f4,
+            0 0 50px #03e9f4,
+            0 0 200px #03e9f4;
 }
 
 #progressBarFull {
     height: 100%;
-    background: rgb(11, 223, 36);
+    background: #03e9f4;
     width: 0%;
+    box-shadow: 0 0 5px #03e9f4,
+            0 0 25px #03e9f4,
+            0 0 50px #03e9f4,
+            0 0 200px #03e9f4;
 }
 @media screen and (max-width: 768px) {
     .choice-container {
