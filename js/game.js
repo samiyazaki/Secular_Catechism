@@ -10,34 +10,19 @@ let score = 0
 let questionCounter = 0
 let availableQuestions = []
 
-window.onload = function () {
-    var thirtySeconds = 30,
-        display = document.querySelector('#time');
-    startTimer(thirtySeconds, display);
-};
+var timeLeft = 30;
+var elem = document.getElementById('timer');
 
-var diff;
-function startTimer(duration, display) {
-    var start = Date.now(),
-       
-        seconds;
-    function timer() {
-        diff = duration - (((Date.now() - start) / 1000) | 0);
-
-        seconds = (diff % 60) | 0;
-
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-        console.log();
-        display.textContent =":" + seconds; 
-        if (diff <= 0) {
-            window.location.href="./end.html"
-            localStorage.setItem('mostRecentScore', score)
-        return window.location.assign('/end.html')
-        }
-    };
-    
-    timer();
-    setInterval(timer, 1000);
+var timerId = setInterval(countdown, 1000);
+console.log();
+function countdown() {
+  if (timeLeft == 0) {
+    window.location.href="./end.html"
+    localStorage.setItem('mostRecentScore', score)
+  } else {
+    elem.innerHTML = timeLeft + '';
+    timeLeft--;
+  }
 }
 
 let questions = [
@@ -121,9 +106,7 @@ choices.forEach(choice => {
         } 
         
         if(classToApply === 'incorrect'){
-            diff  = diff-5;
-            display = document.querySelectorAll('#time');
-            console.log(diff);
+          timeLeft -=5;
         }
         selectedChoice.parentElement.classList.add(classToApply)
 
