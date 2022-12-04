@@ -59,6 +59,7 @@ ul {
 .flex-center {
     justify-content: center;
     align-items: center;
+    margin-top: .5in;
 }
 
 .justify-center {
@@ -80,7 +81,6 @@ ul {
     position:relative;
     display: inline-block;
     padding: 25px 30px;
-    margin: 40px 0;
     color: #03e9f4;
     text-decoration: none;
     text-transform: uppercase;
@@ -98,14 +98,11 @@ ul {
                 0 0 25px #03e9f4,
                 0 0 50px #03e9f4,
                 0 0 200px #03e9f4;
-     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
 }
 
 
 .btn[disabled]:hover{
     cursor: not-allowed;
-    box-shadow: none;
-    transform: none;
 }
 
 #highscore-btn {
@@ -138,6 +135,17 @@ ul {
     flex-direction: column;
     align-items: center;
     max-width: 30rem;
+    min-width:fit-content;
+    min-height:auto;
+}
+#finalScore{
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
 input {
@@ -166,11 +174,24 @@ input::placeholder{
 }
 
 #saveScoreBtn {
-    border: none;
+    font-size: 2.4rem;
+    padding: 2rem 0;
+    width: 30rem;
+    text-align: center;
+    position:relative;
+    display: inline-block;
+    padding: 25px 30px;
+    color: #03e9f4;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+    background-color: rgb(29,26,26)
 }
-
-.fa-home {
-    margin-left: 1rem;
-    font-size: 2rem;
-    color: rgb(28, 26, 26);
+@media screen and (max-width: 768px) {
+    .high-score {
+        min-width: auto;
+    }
 }

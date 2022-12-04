@@ -10,6 +10,36 @@ let score = 0
 let questionCounter = 0
 let availableQuestions = []
 
+window.onload = function () {
+    var thirtySeconds = 30,
+        display = document.querySelector('#time');
+    startTimer(thirtySeconds, display);
+};
+
+
+function startTimer(duration, display) {
+    var start = Date.now(),
+        diff,
+        seconds;
+    function timer() {
+        diff = duration - (((Date.now() - start) / 1000) | 0);
+
+        seconds = (diff % 60) | 0;
+
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent =":" + seconds; 
+        if (diff <= 0) {
+            window.location.href="./end.html"
+            localStorage.setItem('mostRecentScore', score)
+        return window.location.assign('/end.html')
+        }
+    };
+    
+    timer();
+    setInterval(timer, 1000);
+}
+
 let questions = [
     {
         question: 'What does HTML stand for?',
@@ -44,34 +74,6 @@ let questions = [
         answer: 4, 
     }, 
 ]
-function startTimer(duration, display) {
-    var start = Date.now(),
-        diff,
-        seconds;
-    function timer() {
-        diff = duration - (((Date.now() - start) / 1000) | 0);
-
-        seconds = (diff % 60) | 0;
-
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        display.textContent =":" + seconds; 
-
-        if (diff <= 0) {
-            window.location.href="./end.html"
-            localStorage.setItem('mostRecentScore', score)
-        return window.location.assign('/end.html')
-        }
-    };
-    timer();
-    setInterval(timer, 1000);
-}
-
-window.onload = function () {
-    var thirtySeconds = 30,
-        display = document.querySelector('#time');
-    startTimer(thirtySeconds, display);
-};
 
 const SCORE_POINTS = 100
 const MAX_QUESTIONS = 4

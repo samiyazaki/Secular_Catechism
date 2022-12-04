@@ -9,8 +9,6 @@ body {
     border-radius: 4px;
     font-size: 3rem;
     min-width: 80rem;
-    /* */
-    padding: 3rem;
 
 }
 .time{
@@ -51,12 +49,13 @@ body {
                 0 0 25px #03e9f4,
                 0 0 50px #03e9f4,
                 0 0 200px #03e9f4;
+    cursor: pointer;
     
 }
 #hud {
     display: flex;
-    justify-content: space-between;
-
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .hud-prefix {
