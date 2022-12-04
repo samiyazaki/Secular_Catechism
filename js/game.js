@@ -16,10 +16,10 @@ window.onload = function () {
     startTimer(thirtySeconds, display);
 };
 
-
+var diff;
 function startTimer(duration, display) {
     var start = Date.now(),
-        diff,
+       
         seconds;
     function timer() {
         diff = duration - (((Date.now() - start) / 1000) | 0);
@@ -75,6 +75,7 @@ let questions = [
     }, 
 ]
 
+
 const SCORE_POINTS = 100
 const MAX_QUESTIONS = 4
 
@@ -116,9 +117,12 @@ choices.forEach(choice => {
 
         if(classToApply === 'correct') {
             incrementScore(SCORE_POINTS)
-        }
-        if(classToApply === 'incorrect') {
+
+        } 
+        
+        if(classToApply === 'incorrect'){
             diff -=5;
+            display = document.querySelectorAll('#time');
         }
         selectedChoice.parentElement.classList.add(classToApply)
 
