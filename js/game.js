@@ -58,11 +58,19 @@ let questions = [
         choice4: 'Amazon',
         answer: 4, 
     }, 
+    {
+        question: 'What are escape characters for?',
+        choice1: 'When you\'re on a bad date and need to get away',
+        choice2: 'When a writer needs to increase the drama but couldn\'t let a main character expire',
+        choice3: 'They are placed to allow special characters to display when they normally wouldn\'t',
+        choice4: 'They\'re used as placeholders for potty words',
+        answer: 3,
+    }, 
 ]
 
 
 const SCORE_POINTS = 100
-const MAX_QUESTIONS = 4
+const MAX_QUESTIONS = 5
 
 startGame = () => {
     questionCounter = 0
