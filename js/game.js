@@ -27,7 +27,7 @@ function startTimer(duration, display) {
         seconds = (diff % 60) | 0;
 
         seconds = seconds < 10 ? "0" + seconds : seconds;
-
+        console.log();
         display.textContent =":" + seconds; 
         if (diff <= 0) {
             window.location.href="./end.html"
@@ -121,8 +121,9 @@ choices.forEach(choice => {
         } 
         
         if(classToApply === 'incorrect'){
-            diff -=5;
+            diff  = diff-5;
             display = document.querySelectorAll('#time');
+            console.log(diff);
         }
         selectedChoice.parentElement.classList.add(classToApply)
 
