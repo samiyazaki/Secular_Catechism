@@ -16,7 +16,7 @@ var elem = document.getElementById('timer');
 var timerId = setInterval(countdown, 1000);
 console.log();
 function countdown() {
-  if (timeLeft == 0) {
+  if (timeLeft <= 0) {
     window.location.href="end.html"
     localStorage.setItem('mostRecentScore', score)
   } else {
