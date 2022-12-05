@@ -30,6 +30,7 @@ body {
     padding: 2rem;
     width: 100%;
 }
+/* remove choice container hover */
 .correct {
     background: #07f403;
     color: #050801;
@@ -56,6 +57,12 @@ body {
     cursor: pointer;
     
 }
+/*.hover-none{
+    pointer-events:none;
+}
+.hover-add{
+    pointer-events:auto;
+} */
 #hud {
     display: flex;
     justify-content: center;

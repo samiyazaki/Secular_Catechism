@@ -91,6 +91,7 @@ getNewQuestion = () => {
     currentQuestion = availableQuestions[questionsIndex]
     question.innerText = currentQuestion.question
     choices.forEach(choice=> {
+        //choice.parentElement.classList.add('hover-add')
         const number = choice.dataset['number']
         choice.innerText = currentQuestion['choice' + number]
     })
@@ -107,10 +108,9 @@ choices.forEach(choice => {
         const selectedAnswer = selectedChoice.dataset['number']
 
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
-
+        //selectedChoice.parentElement.classList.add('hover-none')
         if(classToApply === 'correct') {
-            incrementScore(SCORE_POINTS)
-
+            incrementScore(SCORE_POINTS);
         } 
         
         if(classToApply === 'incorrect'){
