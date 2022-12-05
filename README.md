@@ -6,7 +6,16 @@
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=samiyazaki" alt="samiyazaki" /></a> </p>
 
 - 🔭 I’m currently working on [Secular-Catechism](https://github.com/samiyazaki/Secular_Catechism)
+<img src="assets\sounds\Secular Catechism.gif" alt="GIF of a JavaScript game that looks really good. Like really really good."></a>
 
+## This is a quiz game built to specific criteria for a project. As you can see the buttons glow on hover which provides a neat little effect and really punches up the look. I added color changes to the 'correct' and 'incorrect' choices that allows me to change the color of the choices the user makes to green for right and red for wrong, but unfortunately I could not get this to override the hover command. I commented out some code related to this so that I could revisit later and see if I can make it work properly. Overall the game functions to expectations, with some issues when trying to resize the pages dynamically. I found a margin and padding that I could not properly manipulate despite hours of code review and even with help of TA's and a Tutor. I will revisit later and try to fix this.
+## The first requirement was that the game would start with the click of a button and a 30 second timer would start as well to countdown to the time remaining and a question would display.
+## When a question is answered, regardless of correct or incorrect, the page loads and presents the next question.
+## When a question is answered incorrectly, 5 seconds is automatically deducted from the countdown timer.
+## When all the questions are answered or the timer reaches 0, the game ends and you are redirected to a page where you see your score displayed and a box is given to enter your name to save it on the high score list.
+## At this page you can save your high score and then when you go to home a button is provided for you to go and revisit all of the old high scores, revealing the last 3 scores.
+## This was an extremely challenging build that covered all of the previous topics of HTML, CSS and JavaScript in depth and beyond since I had to spend much of my free time watching youtube videos to try and figure out how to make this happen.
+## This has been my TedTalk, please go out and hug a passing puppy or something cute. Get consent first.
 - 🌱 I’m currently learning **javaScript, CSS, HTML, Bootstrap, JQuery, APIs and Git commands**
 
 - 👨‍💻 All of my projects are available at [https://github.com/samiyazaki](https://github.com/samiyazaki)
