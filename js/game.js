@@ -1,8 +1,9 @@
-const question = document.querySelector('#question');
-const choices = Array.from(document.querySelectorAll('.choice-text'));
+const question = document.querySelector('#question');// Calls the item with the CSS title question as a constant. I wish my friends called me this much. Or at all. Am I a shitty friend?
+const choices = Array.from(document.querySelectorAll('.choice-text'));//Created an array from all of the CSS items labeled .choice-text, which were the questions in the game.js file. This was a neat trick, thank you Youtube.
 const progressText = document.querySelector('#progressText');
 const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progressBarFull');
+var correctSound;
 
 let currentQuestion = {}
 let acceptingAnswers = true
@@ -10,14 +11,14 @@ let score = 0
 let questionCounter = 0
 let availableQuestions = []
 
-var timeLeft = 30;
+var timeLeft = 30; // I set this timer to 30 seconds because I wanted a sense of urgency. It's definitely not because I'm unoriginal.
 var elem = document.getElementById('timer');
 
 var timerId = setInterval(countdown, 1000);
 console.log();
 function countdown() {
   if (timeLeft <= 0) {
-    window.location.href="end.html"
+    window.location.href="end.html" // This sends the user to the end.html page where the score is displayed and they can enter their name.
     localStorage.setItem('mostRecentScore', score)
   } else {
     elem.innerHTML = timeLeft + '';
@@ -69,8 +70,8 @@ let questions = [
 ]
 
 
-const SCORE_POINTS = 100
-const MAX_QUESTIONS = 5
+const getPoints = 100
+const numQuestions = 5
 
 startGame = () => {
     questionCounter = 0
@@ -79,13 +80,13 @@ startGame = () => {
     getNewQuestion()
 }
 getNewQuestion = () => {
-    if(availableQuestions.length === 0 || questionCounter> MAX_QUESTIONS) {
+    if(availableQuestions.length === 0 || questionCounter> numQuestions) {
         localStorage.setItem('mostRecentScore', score)
         return window.location.assign('end.html')
     }
     questionCounter++
-    progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
-    progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
+    progressText.innerText = `Question ${questionCounter} of ${numQuestions}`
+    progressBarFull.style.width = `${(questionCounter/numQuestions) * 100}%`
 
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
     currentQuestion = availableQuestions[questionsIndex]
@@ -110,7 +111,7 @@ choices.forEach(choice => {
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
         //selectedChoice.parentElement.classList.add('hover-none')
         if(classToApply === 'correct') {
-            incrementScore(SCORE_POINTS);
+            incrementScore(getPoints);
         } 
         
         if(classToApply === 'incorrect'){
