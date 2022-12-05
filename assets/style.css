@@ -173,21 +173,8 @@ input::placeholder{
 }
 
 #saveScoreBtn {
-    font-size: 2.4rem;
-    padding: 2rem 0;
-    width: 30rem;
-    text-align: center;
-    position:relative;
-    display: inline-block;
-    padding: 25px 30px;
-    color: #03e9f4;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: 0.5s;
-    letter-spacing: 4px;
-    overflow: hidden;
-    margin-right: 50px;
-    background-color: rgb(29,26,26)
+    display:none;
+    cursor: pointer;
 }
 @media screen and (max-width: 768px) {
     .high-score {
