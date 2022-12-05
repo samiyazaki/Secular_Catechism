@@ -11,6 +11,17 @@ let score = 0
 let questionCounter = 0
 let availableQuestions = []
 
+var correctAudio = new Audio("../assets/sounds/Correct.mp3")
+var incorrectAudio = new Audio("../assets/sounds/Incorrect.mp3")
+
+function playAudio(correct) {
+   if(correct) {
+    correctAudio.play();
+    return;
+   }
+   incorrectAudio.play();
+   return;
+  }
 var timeLeft = 30; // I set this timer to 30 seconds because I wanted a sense of urgency. It's definitely not because I'm unoriginal.
 var elem = document.getElementById('timer');
 
@@ -112,10 +123,12 @@ choices.forEach(choice => {
         //selectedChoice.parentElement.classList.add('hover-none') This was all part of the earlier attempt to remove the hover effect so you could see the question change color when selected. This worked but removed the class entirely resulting in the app breaking.
         if(classToApply === 'correct') {
             incrementScore(getPoints); // This adds 100 points on a correct answer
+            playAudio(true);
         } 
         
         if(classToApply === 'incorrect'){
-          timeLeft -=5; //This subtracts 5 seconds on an incorrecct answer.
+          timeLeft -=5; //This subtracts 5 seconds on an incorrect answer.
+            playAudio(false);
         }
         selectedChoice.parentElement.classList.add(classToApply)
 
