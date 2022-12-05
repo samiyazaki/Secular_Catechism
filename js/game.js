@@ -111,11 +111,11 @@ choices.forEach(choice => {
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect' //Sets a variable to each question to determine if the answer is correct or not. 
         //selectedChoice.parentElement.classList.add('hover-none') This was all part of the earlier attempt to remove the hover effect so you could see the question change color when selected. This worked but removed the class entirely resulting in the app breaking.
         if(classToApply === 'correct') {
-            incrementScore(getPoints);
+            incrementScore(getPoints); // This adds 100 points on a correct answer
         } 
         
         if(classToApply === 'incorrect'){
-          timeLeft -=5;
+          timeLeft -=5; //This subtracts 5 seconds on an incorrecct answer.
         }
         selectedChoice.parentElement.classList.add(classToApply)
 
