@@ -1,4 +1,4 @@
-const userName = document.querySelector("#userName");
+const userName = document.querySelector("#userName"); 
 const saveScoreBtn = document.querySelector("#saveScoreBtn");
 const finalScore = document.querySelector("#finalScore");
 const mostRecentScore = localStorage.getItem("mostRecentScore");

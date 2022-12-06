@@ -11,8 +11,8 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
-var correctAudio = new Audio("../assets/sounds/Correct.mp3");
-var incorrectAudio = new Audio("../assets/sounds/Incorrect.mp3");
+var correctAudio = new Audio("../assets/sounds/Correct.mp3"); // This variable sets the recordings of my son for a correct answer
+var incorrectAudio = new Audio("../assets/sounds/Incorrect.mp3"); // This variable sets the recordings of my son for an incorrect answer
 
 function playAudio(correct) {
   if (correct) {
@@ -146,7 +146,7 @@ choices.forEach((choice) => {
 });
 
 incrementScore = (num) => {
-  score += num;
+  score += num; // The way we increase the score for the game
   scoreText.innerText = score;
 };
 
