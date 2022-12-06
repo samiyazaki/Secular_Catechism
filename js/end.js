@@ -1,15 +1,14 @@
-const username = document.querySelector("#username");
+const userName = document.querySelector("#userName");
 const saveScoreBtn = document.querySelector("#saveScoreBtn");
 const finalScore = document.querySelector("#finalScore");
 const mostRecentScore = localStorage.getItem("mostRecentScore");
 
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 
-const MAX_HIGH_SCORES = 3;
 
 finalScore.innerText = mostRecentScore;
 
-username.addEventListener("keyup", () => {
+userName.addEventListener("keyup", () => {
   saveScoreBtn.removeAttribute("id");
 });
 
@@ -18,7 +17,7 @@ saveHighScore = (e) => {
 
   const score = {
     score: mostRecentScore,
-    name: username.value,
+    name: userName.value,
   };
   highScores.push(score);
   highScores.sort((a, b) => {

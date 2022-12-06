@@ -84,7 +84,7 @@ let questions = [
   },
 ];
 
-const getPoints = 100; //sets the amount of points added per correct answer
+const getPoints = 200; //sets the amount of points added per correct answer
 const numQuestions = 5; // sets the number of questions asked. I would put more but I'm out of time, not lazy.
 
 startGame = () => {
