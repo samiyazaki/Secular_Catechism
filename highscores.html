@@ -15,6 +15,14 @@
             <a href="index.html" class="btn">Go Home</a>
         </div>
     </div>
-    <script src="./js/highscores.js"></script>
+    <script>
+        const highScoresList= document.querySelector('#highScoresList')
+        const highScores = JSON.parse(localStorage.getItem('highScores')) || []
+
+        highScoresList.innerHTML =
+        highScores.map(score => {
+        return  `<li class="high-score">${score.name} - ${score.score}</li>`    
+        }).join('')
+    </script>
 </body>
 </html>
